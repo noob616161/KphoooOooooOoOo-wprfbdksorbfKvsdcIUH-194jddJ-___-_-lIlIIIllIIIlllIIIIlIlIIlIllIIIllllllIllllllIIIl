@@ -1,31 +1,31 @@
-当地的PlaceName = game.MarketplaceService:GetProductInfo(game.PlaceId).Name
+local PlaceName = game.MarketplaceService:GetProductInfo(game.PlaceId).Name
 
-    如果 不 game:IsLoaded() 然后 重复 game.Loaded:Wait() 直到 game:IsLoaded() 结束
+    if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
     
-    重复 wait() 直到 game:GetService("Players")
+    repeat wait() until game:GetService("Players")
     
-    如果 不 game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") 然后 重复 wait() 直到 game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") 结束
+    if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
         
     wait(1)
 
-做 当地的GUI = game.CoreGui:FindFirstChild("Darkrai");如果图形用户界面然后 GUI:Destroy();结束;如果_G.Color ==无 然后
-_G.Color = Color3.fromRGB(147,112,219)
-   结束 
-结束
+do local GUI = game.CoreGui:FindFirstChild("Darkrai");if GUI then GUI:Destroy();end;if _G.Color == nil then
+       _G.Color = Color3.fromRGB(147,112,219)
+   end 
+end
 
-当地的UserInputService = game:GetService("UserInputService")
-当地的TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
 
-当地的 功能MakeDraggable(topbarobject, object)
-	当地的拖曳=无
-	当地的DragInput =无
-	当地的DragStart =无
-	当地的StartPosition =无
+local function MakeDraggable(topbarobject, object)
+	local Dragging = nil
+	local DragInput = nil
+	local DragStart = nil
+	local StartPosition = nil
 
-	当地的 功能 Update(input)
-		当地的Delta = input.Position - DragStart
-		当地的pos = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
-		当地的Tween = TweenService:Create(object, TweenInfo.new(0.15), {Position = pos})
+	local function Update(input)
+		local Delta = input.Position - DragStart
+		local pos = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
+		local Tween = TweenService:Create(object, TweenInfo.new(0.15), {Position = pos})
 		Tween:Play()
 	end
 
@@ -998,36 +998,36 @@ function DarkraiX:Window(text,gamenme)
 			Sep2.Font = Enum.Font.GothamSemibold
 			Sep2.Text = text
 			Sep2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Sep2.Size = UDim2.new(
+			Sep2.TextSize = 14.000
 			
-Sep2.TextColor3 = Color3.fromRGB(
+			Sep3.Name = "Sep3"
 			Sep3.Parent = Seperator
 			Sep3.BackgroundColor3 = _G.Color
-Sep2.TextSize =
-Sep3.Name =
-Sep3.BorderSizePixel =
-Sep3.Position = UDim2.new(
+			Sep3.BorderSizePixel = 0
+			Sep3.Position = UDim2.new(0, 390, 0, 10)
+			Sep3.Size = UDim2.new(0, 80, 0, 1)
+		end
 
-Sep3.Size = UDim2.new(
-query为空
-query为空
+		function main:Line()
+			local Linee = Instance.new("Frame")
+			local Line = Instance.new("Frame")
 			
-query为空
+			Linee.Name = "Linee"
 			Linee.Parent = MainFramePage
-query为空
-Linee.Name =
-Linee.BackgroundColor3 = Color3.fromRGB(
-Linee.BackgroundTransparency =
+			Linee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Linee.BackgroundTransparency = 1.000
+			Linee.Position = UDim2.new(0, 0, 0.119999997, 0)
+			Linee.Size = UDim2.new(0, 470, 0, 20)
 			
-Linee.Position = UDim2.new(
+			Line.Name = "Line"
 			Line.Parent = Linee
 			Line.BackgroundColor3 = _G.Color
-Linee.Size = UDim2.new(
-Line.Name =
-Line.BorderSizePixel =
-Line.Position = UDim2.new(
-Line.Size = UDim2.new(
-query为空
-query为空
-结束
-query为空
+			Line.BorderSizePixel = 0
+			Line.Position = UDim2.new(0, 0, 0, 10)
+			Line.Size = UDim2.new(0, 470, 0, 1)
+		end
+		return main
+	end
+	return uitab
+end
+return DarkraiX
