@@ -91,7 +91,7 @@ Hannonymous.BackgroundTransparency = 1.000
 Hannonymous.Position = UDim2.new(-0.0399380997, 0, -0.00923076924, 0)
 Hannonymous.Size = UDim2.new(0, 200, 0, 30)
 Hannonymous.Font = Enum.Font.SciFi
-Hannonymous.Text = "bark GUI 2.0"
+Hannonymous.Text = "bark2.0(123fa98修复)"
 Hannonymous.TextColor3 = Color3.fromRGB(255, 255, 255)
 Hannonymous.TextSize = 25.000
 
@@ -1330,34 +1330,34 @@ DupeMoney.MouseButton1Down:connect(function()
         game.ReplicatedStorage.Transactions.ClientToServer.Donate:InvokeServer(game.Players.LocalPlayer, game.Players.LocalPlayer.leaderstats.Money.Value, 1)
         wait(55)
         SendNotification("bark 2.0", "现在等待大约一分钟左右的时间，直到你的钱复制成功", 45)
-        SendNotification("bark 2.8", "复制成功，别忘了支持zhanghuihuihui", 5)
+        SendNotification("bark 2.0", "复制成功，别忘了支持zhanghuihuihui", 5)
         MoneyCooldown = false
-    结束
-结束)
+    end
+end)
 
-WoodRUs.MouseButton1Down:connect(功能()
+WoodRUs.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(162, 31, 56))
-结束)
+end)
 
-BoxedCar.MouseButton1Down:connect(功能()
+BoxedCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(-964, 171, -724))
-结束)
+end)
 
-Furnishings.MouseButton1Down:connect(功能()
+Furnishings.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(4802, 27, -973))
-结束)
+end)
 
-LogicShop.MouseButton1Down:connect(功能()
+LogicShop.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(-1686, 361, 1475))
-结束)
+end)
 
-LandStore.MouseButton1Down:connect(功能()
+LandStore.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(4379, 10, -1775))
-结束)
+end)
 
-BobsShack.MouseButton1Down:connect(功能()
+BobsShack.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(1461, 385, 3277))
-结束)
+end)
 
 ArtsShop.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(-1076, 19, -927))
@@ -1368,54 +1368,54 @@ TeleportCar(CFrame.new(3356, -204, 440))
 end)
 
 function TeleportCar(Pos)
-    如果 game.Players.LocalPlayer.Character 然后 
+    if game.Players.LocalPlayer.Character then 
         Character = game.Players.LocalPlayer.Character
-        如果 Character.Humanoid.SeatPart ~= 无 然后 
+        if Character.Humanoid.SeatPart ~= nil then 
             Car = Character.Humanoid.SeatPart.Parent
-            spawn(功能()
-                为 i=1,5 做
+            spawn(function()
+                for i=1,5 do
                     wait()
                     Car:SetPrimaryPartCFrame(Pos * CFrame.Angles(math.rad(Character.HumanoidRootPart.Orientation.x), math.rad(Character.HumanoidRootPart.Orientation.y), 0))
                     game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(Car.Main)
                     game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(Car.Main)
-                结束
-            结束)
-        结束
-    结束
-结束
+                end
+            end)
+        end
+    end
+end
 
-WoodRUsCar.MouseButton1Down:connect(功能()
+WoodRUsCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(-1869, 269, 1179))
-结束)-别他妈的倒卖
+end)--Don't fucking resell it 
 
-BoxedCarCar.MouseButton1Down:connect(功能()
+BoxedCarCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(509, 3.4, -1497))
-结束)-如果你他妈的改变我老爸，你是在问
+end)-- If you fucking change my old man, you're asking 
 
-FurnishingsCar.MouseButton1Down:connect(功能()
+FurnishingsCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(493, 5, -1682))
-结束)--第二，改变不易，希望大家珍惜，而倒卖者死全家
+end)--Second, it is not easy to change, I hope you cherish, and the reseller dies the whole family 
 
-LogicShopCar.MouseButton1Down:connect(功能()
+LogicShopCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(4620, 4, -742))
-结束)
+end)
 
-LandStoreCar.MouseButton1Down:connect(功能()
+LandStoreCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(1450, 420, 3171))
-结束)
+end)
 
-BobsShackCar.MouseButton1Down:connect(功能()
+BobsShackCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(232, 9, -2533))
-结束）结束）-如果你他妈的改变我老爸，你是在问
+end)
 
-ArtsShopCar.MouseButton1Down:connect(传送车（cframe.New（4620，4，-742））()
+ArtsShopCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(5210, -165, 736))
-传送车（cframe.New（1450、420、3171））)
+end)
 
-PowerShopCar.MouseButton1Down:connect(传送车（cframe.New（232，9，-2533））()
+PowerShopCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(1070, 17, 1140))
-传送车（cframe.New（5210，-165，736））)
+end)
 
-GoHomeCar.MouseButton1Down:connect(传送车（cframe.New（1070、17、1140））()
+GoHomeCar.MouseButton1Down:connect(function()
 TeleportCar(CFrame.new(-12, -211, -1344))
-传送车（cframe.New（-12，-211，-1344））)
+end)
