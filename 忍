@@ -1,1 +1,105 @@
-local win = ui:new("忍脚本")
+loadstring(game:HttpGet("https://pastebin.com/raw/6xQ5gtbj"))();
+local ui = loadstring(game:HttpGet"https://pastebin.com/raw/E9PzvbeX")()
+local window = ui:new("忍 脚 本")
+
+local UITab1 = window:Tab("UI设置",'6035145364')
+local GYTab1 = window:Tab("关于",'6035145364')
+local Player1 = window:Tab("基础功能",'6035145364')
+local DoorsTab1 = window:Tab("Doors",'6035145364')
+local FMTab1 = window:Tab("伐木大亨2",'6035145364')
+local JY1 = window:Tab("监狱人生",'6035145364')
+local JS1 = window:Tab("极速传奇",'6035145364')
+local Tab1 = window:Tab("脚本中心",'6035145364')
+local UITab = UITab1:section("UI设置",true)
+local GYTab = GYTab1:section("作者",true)
+local Player = Player1:section("基础功能",true)
+local DoorsZWTab = DoorsTab1:section("中文脚本",false)
+local DoorsZHTab = DoorsTab1:section("招换物品",false)
+local DoorsQTTab = DoorsTab1:section("其他",false)
+local DoorsTab = DoorsTab1:section("英语脚本",false)
+local FMTab = FMTab1:section("伐木大亨2",true)
+local JY = JY1:section("监狱人生",true)
+local JS = JS1:section("极速传奇",true)
+local Tab = Tab1:section("脚本中心",true)
+
+GYTab:Button("作者：123fa98", function()
+setclipboard("123fa98")
+end)
+GYTab:Button("作者QQ：397510573", function()
+setclipboard("397510573")
+end)
+
+
+    UITab:Button("摧毁UI",function()
+        game:GetService("CoreGui")["frosty"]:Destroy()
+    end)
+
+    UITab:Toggle("彩虹UI", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+    end)
+
+Player:Button("飞行", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/28CWNSrK"))()
+end)
+Player:Button("阿尔宙斯飞行", function()
+     loadstring(game:HttpGet('https://pastebin.com/raw/jQTcRnqz'))();
+end)
+JS:Button("极速传奇", function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/rqnKXF4h'))();
+end)
+Player:Button("点击传送工具", function()
+    mouse = game.Players.LocalPlayer:GetMouse() tool = Instance.new("Tool") tool.RequiresHandle = false tool.Name = "作者:397510573" tool.Activated:connect(function() local pos = mouse.Hit+Vector3.new(0,2.5,0) pos = CFrame.new(pos.X,pos.Y,pos.Z) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos end) tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+JS:Button("返回出生岛", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9682.98828125, 58.87917709350586, 3099.033935546875)      
+end)
+
+JS:Button("白雪城", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9676.138671875, 58.87917709350586, 3782.69384765625)   
+end)
+
+JS:Button("熔岩城", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11054.96875, 216.83917236328125, 4898.62841796875)       
+end)
+
+JS:Button("传奇公路", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13098.87109375, 216.83917236328125, 5907.6279296875)    
+end)
+
+Player:Toggle("无限跳", "", false, function(Value)
+    Jump = Value
+    game.UserInputService.JumpRequest:Connect(function()
+        if Jump then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+        end
+    end)
+end)
+
+Player:Toggle("穿墙", "", false, function(Value)
+    Noclip = Value
+    game.RunService.Stepped:Connect(function()
+        if Noclip then
+            game.Players.LocalPlayer.Character.Head.CanCollide = false
+            game.Players.LocalPlayer.Character.Torso.CanCollide = false
+        else
+            game.Players.LocalPlayer.Character.Head.CanCollida = true
+            game.Players.LocalPlayer.Character.Torso.CanCollide = true
+        end
+    end)
+end)
+
+Player:Toggle("夜视", "", false, function(Value)
+    Light = Value
+    game.RunService.Stepped:Connect(function()
+        if Light then
+            game.Lighting.Ambient = Color3.new(1, 1, 1)
+        else
+            game.Lighting.Ambient = Color3.new(0, 0, 0)
+        end
+    end)
+end)
