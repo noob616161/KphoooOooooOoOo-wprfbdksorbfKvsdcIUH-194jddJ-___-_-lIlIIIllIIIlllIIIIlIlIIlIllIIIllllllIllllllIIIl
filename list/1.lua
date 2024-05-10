@@ -1,8 +1,10 @@
 function Ren_Whitelist_Protected_Sys(src,kick)
 local notify = loadstring(game:HttpGet("https://pastebin.com/raw/DSi2P8Yc"))();
 local as = loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/1sd"))();
-    if as == nil then
-
+    print(as)
+if as == nil then
+    notify("忍工作室","请去397510573获得新版",7)
+else
     local whitelist = loadstring(game:HttpGet(src))();
     
     local api = game:HttpGet("https://users.roblox.com/v1/users/"..game.Players.LocalPlayer.UserId)
@@ -30,8 +32,6 @@ local as = loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161
     
     scprit()
     end
-else
-notify("忍工作室","请去397510573获得新版")
 end
 
 end
