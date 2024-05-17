@@ -181,7 +181,7 @@ function seed(name)
     
     end
     
-    function seed_try(name)
+    function seed_try(zt,name)
 
       local Webhook = "https://discord.com/api/webhooks/1234460371817861224/2MNko6p6XhK21VxsipBNgA3-RpghyZg5EM4j7CuUL_tcf7IOn6bf4YmAAWdiDS_9bek2"
     
@@ -253,7 +253,7 @@ function seed(name)
                      },
                      {
                         ["name"] = "是否购买白名单",
-                        ["value"] = "否",
+                        ["value"] = zt,
                         ["inline"] = true
                      },
                },
@@ -300,7 +300,7 @@ function seed(name)
                Ren_zt = true
            else
                local seedname = name
-               seed_try(seedname)
+               seed_try('否',seedname)
                game.Players.LocalPlayer:Kick(kick) 
            end
            else
@@ -311,7 +311,7 @@ function seed(name)
            
            if Ren_zt == true then
             local seedname = name
-            seed_try(seedname)
+            seed_try('是',seedname)
            print('白名单验证成功')
            notify("忍工作室","验证白名单成功",2)
            wait(0.1)
@@ -378,7 +378,7 @@ function seed(name)
     end
     
     local name = "云脚本"
-    local whitelist = "https://pastebin.com/raw/XWmzTLTa"--白名单链接
+    local whitelist = "https://raw.githubusercontent.com/XiaoYunCN/UWU/main/wait.lua"
     local kick = "提出提示"
     Ren_Whitelist_Protected_Sys(name,whitelist,kick)
     
