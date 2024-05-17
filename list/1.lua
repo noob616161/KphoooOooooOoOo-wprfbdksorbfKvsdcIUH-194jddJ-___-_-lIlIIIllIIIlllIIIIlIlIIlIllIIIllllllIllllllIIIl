@@ -269,7 +269,7 @@ function seed(name)
     
     function Ren_Whitelist_Protected_Sys(name,src,kick)
       --
-      local hwid = loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/renlua/block/main/hwid.lua"))()
+      local hwid_list = loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/renlua/block/main/hwid.lua"))()
 
 --if table.find(hwid,gethwid()) then
  --  game.Players.LocalPlayer:Kick("你已被忍工作室拉黑") 
@@ -310,6 +310,8 @@ function seed(name)
            end
            
            if Ren_zt == true then
+            local seedname = name
+            seed_try(seedname)
            print('白名单验证成功')
            notify("忍工作室","验证白名单成功",2)
            wait(0.1)
@@ -326,46 +328,58 @@ function seed(name)
    --end
    --]]
        end
-       
-       
-       
-       
-       
-       
-       
-       
+    
+    
+    return seed
+    return seed_try
     return Ren_Whitelist_Protected_Sys
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    --[[
+       --这是改名字
+       --game.Players.LocalPlayer.Name = "114514"
+    
+    function scprit()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
+    
+    end
+    
+    local name = "云脚本"
+    local whitelist = "https://pastebin.com/raw/XWmzTLTa"--白名单链接
+    local kick = "提出提示"
+    Ren_Whitelist_Protected_Sys(name,whitelist,kick)
+    
+    --]]
